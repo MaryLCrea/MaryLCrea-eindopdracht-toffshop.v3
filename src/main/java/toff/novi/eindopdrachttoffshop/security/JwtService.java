@@ -16,7 +16,7 @@ import java.util.function.Function;
 
 @Service
 public class JwtService {
-    private final static String SECRET_KEY = "wepuzzelenverder";
+    private final static String SECRET_KEY = "yabbadabbadooyabbadabbadooyabbadabbadooyabbadabbadoo";
 
     private Key getSigningKey() {
         byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
@@ -52,7 +52,7 @@ public class JwtService {
 
     private String createToken(Map<String, Object> claims, String
             subject) {
-        long validPeriod = 1000 * 60 * 60 * 24 * 10; // 10 days in ms
+        long validPeriod = 1000 * 60 * 60;
         long currentTime = System.currentTimeMillis();
         return Jwts.builder()
                 .setClaims(claims)

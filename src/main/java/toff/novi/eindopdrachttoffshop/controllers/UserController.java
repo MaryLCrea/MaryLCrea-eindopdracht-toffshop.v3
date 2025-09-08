@@ -3,7 +3,7 @@ package toff.novi.eindopdrachttoffshop.controllers;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import toff.novi.eindopdrachttoffshop.config.components.UriHelper;
+import toff.novi.eindopdrachttoffshop.config.UriHelper;
 import toff.novi.eindopdrachttoffshop.dtos.UserRequestDto;
 import toff.novi.eindopdrachttoffshop.dtos.UserResponseDto;
 import toff.novi.eindopdrachttoffshop.models.User;
@@ -31,7 +31,6 @@ public class UserController {
     public ResponseEntity<List<UserResponseDto>> createUsers(@Valid @RequestBody List<UserRequestDto> userRequestDtos) {
         List<UserResponseDto> responseDtos = userRequestDtos.stream()
                 .map(userService::createUser)
-                .map(UserMapper::toResponseDto)
                 .toList();
 
         URI uri = responseDtos.isEmpty() ? null :

@@ -1,4 +1,4 @@
-package toff.novi.eindopdrachttoffshop.controllers;//package toff.novi.eindopdrachttoffshop.controllers;
+package toff.novi.eindopdrachttoffshop.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,11 +9,13 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 import toff.novi.eindopdrachttoffshop.dtos.CartResponseDto;
 import toff.novi.eindopdrachttoffshop.dtos.UserRequestDto;
+import toff.novi.eindopdrachttoffshop.dtos.UserResponseDto;
 import toff.novi.eindopdrachttoffshop.models.User;
 import toff.novi.eindopdrachttoffshop.services.CartService;
 import toff.novi.eindopdrachttoffshop.services.UserService;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,7 +30,7 @@ class OrderItemControllerIntegrationT {
 
     private CartService cartService;
 
-    private User testUser;
+    private UserResponseDto testUser;
 
     @BeforeEach
     void setUp() {

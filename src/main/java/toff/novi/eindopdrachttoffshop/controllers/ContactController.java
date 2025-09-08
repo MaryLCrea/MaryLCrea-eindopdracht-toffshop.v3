@@ -3,7 +3,7 @@ package toff.novi.eindopdrachttoffshop.controllers;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import toff.novi.eindopdrachttoffshop.config.components.UriHelper;
+import toff.novi.eindopdrachttoffshop.config.UriHelper;
 import toff.novi.eindopdrachttoffshop.dtos.ContactRequestDto;
 import toff.novi.eindopdrachttoffshop.dtos.ContactResponseDto;
 import toff.novi.eindopdrachttoffshop.services.ContactService;

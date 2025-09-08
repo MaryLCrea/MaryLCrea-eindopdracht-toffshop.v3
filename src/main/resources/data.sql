@@ -4,17 +4,17 @@ VALUES
 ('Piet Puk', 'piet@email.com', '$2a$14$xA9v7sQGqiniWdh0AE0qQ.BlERiBbk60FaJRWdFg3wBWLgKH.pIK2'),
 ('Tessa Pluk', 'tessa@email.com', '$2a$14$vwtLcU.9HivcnD8Ne7SHMeGaXP.SVDJCujqRe4.KCtXTHpfuSVE6q');
 
+
 --Roles
-INSERT INTO roles (rolename)
-VALUES
- ('ROLE_CUSTOMER'),
- ('ROLE_ADMIN');
+INSERT INTO roles(rolename)
+VALUES ('ROLE_USER'), ('ROLE_ADMIN');
 
 -- User-Roles
 INSERT INTO user_roles (user_id, role_name)
 VALUES
-(1,  'ROLE_CUSTOMER'),
+(1,  'ROLE_USER'),
 (2,  'ROLE_ADMIN');
+
 
 --Products
 INSERT INTO products (name, description, price, category, brand, color, heel, size, stock_quantity, is_active, created_at, updated_at)

@@ -1,4 +1,4 @@
-package toff.novi.eindopdrachttoffshop.config.components;
+package toff.novi.eindopdrachttoffshop.config;
 
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
