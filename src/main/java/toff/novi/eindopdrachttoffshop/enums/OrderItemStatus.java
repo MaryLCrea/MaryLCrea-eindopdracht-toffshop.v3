@@ -2,6 +2,7 @@ package toff.novi.eindopdrachttoffshop.enums;
 
 public enum OrderItemStatus {
     INCART("In winkelwagen"),
+    PENDING("Pending"),
     ORDERED("Besteld"),
     SHIPPED("Verzonden"),
     DELIVERED("Afgeleverd"),

@@ -17,8 +17,9 @@ public class OrderItem {
     @JoinColumn(name = "cart_id")
     private Cart cart;
 
-    @Column(name = "order_id")
-    private Integer orderId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")
+    private Order order;
 
     @Column(name = "product_name", nullable = false)
     private String productName;
@@ -60,11 +61,11 @@ public class OrderItem {
     }
 
     public Integer getOrderId() {
-        return orderId;
+        return (order != null) ? order.getId() : null;
     }
 
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public String getProductName() {
